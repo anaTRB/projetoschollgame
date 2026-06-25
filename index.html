@@ -2,16 +2,13 @@
 <html lang="pt-BR">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>School Game App</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -26,11 +23,9 @@
 </div>
 
 <div class="titulo">
-
 <h1 class="school">SCHOOL</h1>
 <h1 class="game">GAME</h1>
 <h1 class="app">APP</h1>
-
 </div>
 
 <div class="lado">
@@ -40,13 +35,9 @@
 
 </div>
 
-<button id="btnEntrar">
-ENTRAR
-</button>
+<button id="btnEntrar">ENTRAR</button>
 
-<div class="frase">
-✨ CONQUISTE, EVOLUA E APRENDA ✨
-</div>
+<div class="frase">✨ CONQUISTE, EVOLUA E APRENDA ✨</div>
 
 </section>
 
@@ -58,17 +49,13 @@ ENTRAR
 🎓 School Game App
 </div>
 
-<button onclick="mostrarArea('materias')">
-Matérias
-</button>
+<div id="usuario">👤 Jogador</div>
+<div id="xp">⭐ XP: 0</div>
+<div id="contador">Perguntas: 0</div>
 
-<button onclick="mostrarArea('secretaria')">
-Secretaria
-</button>
-
-<button onclick="mostrarArea('sobre')">
-Sobre
-</button>
+<button onclick="mostrarArea('materias')">Matérias</button>
+<button onclick="mostrarArea('secretaria')">Secretaria</button>
+<button onclick="mostrarArea('sobre')">Sobre</button>
 
 <div id="relogio"></div>
 
@@ -84,42 +71,32 @@ Sobre
 Bem-vindo! Faça perguntas para a IA educacional.
 </p>
 
-<input
-type="text"
-id="pergunta"
-placeholder="🤖 Pergunte algo para a IA..."
->
+<input type="text" id="pergunta" placeholder="🤖 Pergunte algo para a IA...">
 
-<button onclick="responderPergunta()">
-Perguntar
-</button>
+<button onclick="responderPergunta()">Perguntar</button>
 
 <div id="resposta"></div>
+
+<div class="barra">
+<div id="progresso"></div>
+</div>
 
 </div>
 
 <div id="secretaria" class="area">
-
 <h2>Secretaria</h2>
-
 <p>Telefone: (19) 3434-9993</p>
-
 <p>Email: secretaria@schoolgame.com</p>
-
 <p>Horário: 08h às 17h</p>
-
 </div>
 
 <div id="sobre" class="area">
-
 <h2>Sobre</h2>
-
 <p>
 School Game App é um aplicativo educacional criado
 para ajudar alunos a aprender de forma divertida,
 rápida e interativa.
 </p>
-
 </div>
 
 </div>
