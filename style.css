@@ -22,7 +22,7 @@ background-repeat:no-repeat;
 min-height:100vh;
 }
 
-/* TELA INICIAL */
+/* ===== TELA INICIAL ===== */
 
 #inicio{
 
@@ -54,32 +54,33 @@ gap:50px;
 .emoji{
 
 font-size:80px;
-
 animation:flutuar 2s infinite;
 }
 
 @keyframes flutuar{
-
 0%{transform:translateY(0);}
 50%{transform:translateY(-10px);}
 100%{transform:translateY(0);}
 }
 
 .titulo{
-
 display:flex;
 flex-direction:column;
 align-items:center;
 }
 
-.school{
-
+.school,
+.game,
+.app{
 font-family:'Press Start 2P', cursive;
+text-shadow:0 0 10px rgba(0,0,0,0.6);
+}
 
+/* cores do título */
+
+.school{
 font-size:90px;
-
 color:#ffd000;
-
 text-shadow:
 0 0 10px #ffd000,
 0 0 20px #ffd000,
@@ -87,13 +88,8 @@ text-shadow:
 }
 
 .game{
-
-font-family:'Press Start 2P', cursive;
-
 font-size:90px;
-
 color:#1f8fff;
-
 text-shadow:
 0 0 10px #1f8fff,
 0 0 20px #1f8fff,
@@ -101,16 +97,12 @@ text-shadow:
 }
 
 .app{
-
-font-family:'Press Start 2P', cursive;
-
 font-size:65px;
-
 color:white;
-
-text-shadow:
-6px 6px 0 black;
+text-shadow:6px 6px 0 black;
 }
+
+/* botão entrar */
 
 #btnEntrar{
 
@@ -118,38 +110,32 @@ width:400px;
 height:100px;
 
 border:none;
-
 border-radius:20px;
 
-background:
-linear-gradient(
-135deg,
-#00bfff,
-#004cff);
+background:linear-gradient(135deg,#00bfff,#004cff);
 
 color:white;
-
 font-size:28px;
 
 font-family:'Press Start 2P', cursive;
 
 cursor:pointer;
 
-box-shadow:
-0 0 30px #00bfff;
+box-shadow:0 0 30px #00bfff;
 
-transition:.3s;
+transition:0.3s;
 }
 
 #btnEntrar:hover{
-
-transform:scale(1.05);
+transform:scale(1.08);
+box-shadow:0 0 40px #00bfff;
 }
+
+/* frase */
 
 .frase{
 
-background:
-rgba(0,0,60,.8);
+background:rgba(0,0,60,.8);
 
 border:3px solid #00bfff;
 
@@ -162,53 +148,58 @@ color:white;
 font-family:'Press Start 2P', cursive;
 
 font-size:20px;
+text-align:center;
 }
 
-/* TELA PRINCIPAL */
+/* ===== TELA PRINCIPAL ===== */
 
 #principal{
-
 display:none;
-
 min-height:100vh;
 }
+
+/* menu */
 
 .menu{
 
 display:flex;
-
 justify-content:center;
 align-items:center;
-
 gap:20px;
 
 padding:20px;
 
 background:#111;
+flex-wrap:wrap;
 }
+
+/* elementos do menu */
 
 .logo-menu{
-
 color:white;
-
 font-weight:bold;
-
 font-size:18px;
 }
+
+#usuario,
+#xp,
+#contador{
+color:#ffd000;
+font-weight:bold;
+font-size:14px;
+margin:0 10px;
+}
+
+/* botões menu */
 
 .menu button{
 
 padding:15px 30px;
 
 border:none;
-
 border-radius:12px;
 
-background:
-linear-gradient(
-135deg,
-#00bfff,
-#004cff);
+background:linear-gradient(135deg,#00bfff,#004cff);
 
 color:white;
 
@@ -216,81 +207,111 @@ cursor:pointer;
 
 font-weight:bold;
 
-transition:.3s;
+transition:0.3s;
 }
 
 .menu button:hover{
-
 transform:translateY(-3px);
 }
+
+/* relógio */
 
 #relogio{
 
 color:white;
-
 font-size:18px;
+background:#222;
+padding:10px 20px;
+border-radius:10px;
+border:2px solid #00bfff;
 }
+
+/* conteúdo */
 
 .conteudo{
 
 max-width:900px;
-
 margin:auto;
-
 padding:30px;
 }
+
+/* áreas */
 
 .area{
 
 display:none;
 
-background:
-rgba(255,255,255,.95);
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+-webkit-backdrop-filter:blur(15px);
 
 padding:30px;
 
 border-radius:20px;
 
-box-shadow:
-0 10px 40px rgba(0,0,0,.25);
+box-shadow:0 10px 40px rgba(0,0,0,.3);
+
+color:white;
+
+animation:aparecer 0.4s ease;
 }
+
+/* animação */
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* texto boas vindas */
 
 .boasvindas{
-
 margin-top:15px;
 margin-bottom:20px;
-
-color:#444;
+color:#eee;
 }
+
+/* input */
 
 input{
 
 width:100%;
-
 padding:18px;
 
 margin-top:15px;
 margin-bottom:15px;
 
-border:none;
+border:2px solid transparent;
+border-radius:15px;
 
-border-radius:12px;
-
-background:#f5f9ff;
+background:rgba(255,255,255,.9);
 
 font-size:16px;
 
 outline:none;
+
+transition:0.3s;
 }
+
+input:focus{
+border-color:#00bfff;
+box-shadow:0 0 15px #00bfff;
+}
+
+/* botão dentro da área */
 
 .area button{
 
 padding:15px;
-
 width:100%;
 
 border:none;
-
 border-radius:12px;
 
 background:#0084ff;
@@ -298,23 +319,57 @@ background:#0084ff;
 color:white;
 
 cursor:pointer;
+font-weight:bold;
+
+transition:0.3s;
 }
+
+.area button:hover{
+background:#005fcc;
+}
+
+/* resposta da IA */
 
 #resposta{
 
 margin-top:20px;
 
-background:white;
+background:rgba(255,255,255,.95);
 
-border-left:6px solid #0084ff;
+border-left:6px solid #00bfff;
 
 padding:20px;
 
-border-radius:12px;
+border-radius:15px;
 
-box-shadow:
-0 4px 15px rgba(0,0,0,.15);
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+color:#222;
+
+line-height:1.6;
+
+white-space:pre-wrap;
 }
+
+/* barra de XP */
+
+.barra{
+width:100%;
+height:15px;
+background:#333;
+border-radius:20px;
+margin-top:20px;
+overflow:hidden;
+}
+
+#progresso{
+width:0%;
+height:100%;
+background:linear-gradient(90deg,#00bfff,#00ff88);
+transition:0.4s;
+}
+
+/* footer */
 
 footer{
 
