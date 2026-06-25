@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>School Game App</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<section id="inicio">
+
+<div class="topo">
+
+<div class="lado">
+<div class="emoji">🎒</div>
+<div class="emoji">📚</div>
+</div>
+
+<div class="titulo">
+
+<h1 class="school">SCHOOL</h1>
+<h1 class="game">GAME</h1>
+<h1 class="app">APP</h1>
+
+</div>
+
+<div class="lado">
+<div class="emoji">🏆</div>
+<div class="emoji">⭐</div>
+</div>
+
+</div>
+
+<button id="btnEntrar">
+ENTRAR
+</button>
+
+<div class="frase">
+✨ CONQUISTE, EVOLUA E APRENDA ✨
+</div>
+
+</section>
+
+<section id="principal">
+
+<nav class="menu">
+
+<div class="logo-menu">
+🎓 School Game App
+</div>
+
+<button onclick="mostrarArea('materias')">
+Matérias
+</button>
+
+<button onclick="mostrarArea('secretaria')">
+Secretaria
+</button>
+
+<button onclick="mostrarArea('sobre')">
+Sobre
+</button>
+
+<div id="relogio"></div>
+
+</nav>
+
+<div class="conteudo">
+
+<div id="materias" class="area">
+
+<h2>Matérias</h2>
+
+<p class="boasvindas">
+Bem-vindo! Faça perguntas para a IA educacional.
+</p>
+
+<input
+type="text"
+id="pergunta"
+placeholder="🤖 Pergunte algo para a IA..."
+>
+
+<button onclick="responderPergunta()">
+Perguntar
+</button>
+
+<div id="resposta"></div>
+
+</div>
+
+<div id="secretaria" class="area">
+
+<h2>Secretaria</h2>
+
+<p>Telefone: (19) 3434-9993</p>
+
+<p>Email: secretaria@schoolgame.com</p>
+
+<p>Horário: 08h às 17h</p>
+
+</div>
+
+<div id="sobre" class="area">
+
+<h2>Sobre</h2>
+
+<p>
+School Game App é um aplicativo educacional criado
+para ajudar alunos a aprender de forma divertida,
+rápida e interativa.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+Desenvolvido para o TCC • School Game App • 2026
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
